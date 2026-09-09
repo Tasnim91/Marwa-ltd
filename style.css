@@ -12,6 +12,8 @@
   --space-sm: 16px;
   --space-md: 32px;
   --space-lg: 80px;
+  --surface: #FFFFFF;
+  --border: #E5DFD5;
 }
 
 html, body {
@@ -127,9 +129,7 @@ nav a.active{
   text-align: center;
 }
 
-.hero-box-center h2 {
-  text-align: center !important;
-}
+
 /* ===== HERO TEXT ===== */
 .hero-text{
   width: 100%;
@@ -150,23 +150,28 @@ nav a.active{
   margin-bottom: 0;
 }
 
-.text {
-  margin: 0 10px;
-}
 
 .hero-text p {
-  letter-spacing: 3px;
-  color: #7A7067;
   font-family: 'Inter', sans-serif;
   font-size: 15px;
-  margin-top: 20px;
+  color: #7A7067;
+  letter-spacing: 3px;
+  text-align: left;
+  margin: 24px 0 0;
 }
 
-.hero-text .text{
-  margin: 0;
-  font-size: 17px;
-  padding-top: 10px;
+.hero-box-center .hero-text h1,
+.hero-box-center .hero-text p {
+  text-align: center;
 }
+
+.hero-box-center .hero-text p {
+  letter-spacing: normal;
+  font-size: 16px;
+  max-width: 420px;
+  margin: 24px auto 0;
+}
+
 
 /* ===== HERO BUTTONS ===== */
 
@@ -217,14 +222,20 @@ nav a.active{
 .hero-rating {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 18px;
-  font-size: 23px;
+  gap: 12px;
+  margin-top: -6px;
 }
 
 .hero-rating span:first-child {
-  font-size: 40px;
+  font-size: 28px;
   color: #BFA98A;
+  line-height: 1;
+}
+
+.hero-rating span:last-child {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #7A7067;
 }
 
 /* ====== Services ======== */
@@ -872,9 +883,11 @@ footer{
 
 /* ====== Services Page ======== */
 
+
+
 .section-header {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: var(--space-lg) 24px 48px;
   text-align: center;
   background: var(--bg);
@@ -896,4 +909,139 @@ footer{
   color: var(--text-muted);
   max-width: 620px;
   margin: 0 auto;
+}
+
+.services-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  align-items: center;
+  background: var(--surface, #FFFFFF);
+  border: 1px solid var(--border, #E5DFD5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.service-item:nth-child(even) .service-img {
+  order: 2;
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-content {
+  padding: var(--space-md);
+}
+
+.service-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.service-content p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.service-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.service-content li {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text);
+  padding: 6px 0;
+}
+
+.service-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--gold);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.25s ease;
+}
+
+.service-btn:hover {
+  background: var(--text);
+}
+
+
+.trust-badges {
+  background: var(--bg);
+  padding: var(--space-lg) 24px;
+}
+
+.trust-badges__list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.trust-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.trust-badge__icon {
+  width: 56px;
+  height: 56px;
+  padding: 14px;
+  color: var(--gold);
+  stroke-width: 1.5;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.trust-badge__title {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.trust-badge__text {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 180px;
 }
