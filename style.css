@@ -1045,3 +1045,28 @@ footer{
   margin: 0;
   max-width: 180px;
 }
+
+/* ====== Gallery ====== */
+.gallery-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px var(--space-lg);
+  column-count: 3;
+  column-gap: 12px;
+  column-fill: balance;
+}
+
+.gallery-grid img {
+  width: 100%;
+  display: block;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  break-inside: avoid;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
