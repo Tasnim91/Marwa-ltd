@@ -1113,5 +1113,149 @@ footer{
     border-radius: 4px;
 }
 
+/* ============================================
+   MOBILE STYLES  (phones & small tablets)
+   Everything below only applies at 768px or less
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* ---- HERO ---- */
+  .hero-img {
+    height: 250px;              /* shorter image on mobile */
+  }
+
+  .hero-box,
+  .hero-box-center {
+    position: static;           /* stop floating over the image */
+    transform: none;            /* cancel desktop centering */
+    width: auto;                /* full width instead of 42% */
+    left: auto;
+    top: auto;
+    padding: 30px 20px;
+    border-radius: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-buttons a {
+    font-size: 16px;            /* was 23px — too big */
+    padding: 12px 20px;
+  }
 
 
+  /* ---- BEFORE / AFTER (homepage) ---- */
+  #services h2 {
+    font-size: 24px;
+    margin-bottom: 40px;        /* was 120px — huge gap */
+  }
+
+  .section-line {
+    display: none;              /* hide decorative side lines */
+  }
+
+  .before-after-img {
+    flex-wrap: wrap;            /* let cards drop to next line */
+    margin: 40px 15px;
+  }
+
+  .img-card,
+  .img-card:nth-child(2) {
+    width: 47%;                 /* two per row */
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .img-card:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .badge {
+    top: 8px;                   /* sit on image, not above */
+    font-size: 14px;
+  }
+
+
+  /* ---- BEFORE / AFTER (gallery page) ---- */
+  .ba-pair {
+    flex-direction: column;     /* stack the two images */
+  }
+
+  .ba-image img {
+    height: 250px;
+  }
+
+
+  /* ---- WHY CHOOSE US ---- */
+  #why-us {
+    padding: 40px 20px;
+  }
+
+  .why-us-grid {
+    flex-direction: column;     /* stack the badges */
+  }
+
+  .why-us-card {
+    border-right: none;
+    border-bottom: 3px solid #DDD5C9;
+    padding: 25px 10px;
+  }
+
+  .why-us-card:last-child {
+    border-bottom: none;
+  }
+
+    /* ---- SERVICES CARDS ---- */
+  .services-grid {
+    flex-direction: column;     /* stack all 5, don't run off-screen */
+  }
+
+  /* ---- RECENT PROJECTS ---- */
+  .image-grid {
+    flex-wrap: wrap;            /* let images drop to next row */
+  }
+
+  .image-grid img {
+    flex: 1 1 45%;             /* two per row, each big enough to see */
+    height: 250px;
+  }
+
+  /* ---- REVIEWS ---- */
+  .review-grid {
+    flex-direction: column;     /* stack review cards */
+  }
+
+  /* ---- QUOTE FORM ---- */
+  .quote-container {
+    flex-direction: column;     /* form on top, image below */
+  }
+
+  .quote-image {
+    display: none;
+  }
+
+  .quote-grid {
+    padding: 40px 20px;         /* was 60px 60px — too much on mobile */
+  }
+
+    /* ---- FOOTER ---- */
+  .footer-grid {
+    flex-direction: column;     /* stack the four columns */
+    gap: 30px;
+    padding: 40px 25px;
+  }
+
+  .footer-card {
+    border-right: none;         /* side dividers wrong when stacked */
+    border-bottom: 1px solid #2C2C29;
+    padding-bottom: 25px;
+  }
+
+  .footer-card:last-child {
+    border-bottom: none;
+  }
+
+    .footer-card ul { gap: 8px; }
+
+}
