@@ -827,6 +827,10 @@ footer{
   line-height: 1;
 }
 
+.footer-card li a {
+  line-height: 1;
+}
+
 .footer-nav {
   display: flex;
   flex-direction: column;
