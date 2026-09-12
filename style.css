@@ -1295,4 +1295,24 @@ footer{
     padding: 15px 0;
   }
 
+    /* ---- SERVICES PAGE: SERVICE CARDS ---- */
+  .service-item {
+    grid-template-columns: 1fr;   /* one column: image on top, text below */
+  }
+
+  .service-item:nth-child(even) .service-img {
+    order: 0;                     /* cancel the desktop left/right swap */
+  }
+
+  .service-img {
+    min-height: 220px;
+    max-height: 260px;
+  }
+
+  /* ---- TRUST BADGES STRIP ---- */
+  .trust-badges__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 10px;
+  }
+
 }
