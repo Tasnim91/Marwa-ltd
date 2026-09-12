@@ -129,6 +129,14 @@ nav a.active{
   text-align: center;
 }
 
+.menu-btn {
+  display: none;              /* invisible on desktop */
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #2D2A26;
+}
 
 /* ===== HERO TEXT ===== */
 .hero-text{
@@ -1135,15 +1143,20 @@ footer{
     border-radius: 0;
   }
 
-  .hero-text h1 {
-    font-size: 26px;
+  .hero-text h1,
+  .hero-text p {
+    text-align: center;
   }
 
-  .hero-buttons a {
-    font-size: 16px;            /* was 23px — too big */
-    padding: 12px 20px;
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 
+  .hero-rating {
+    justify-content: center;
+  }
 
   /* ---- BEFORE / AFTER (homepage) ---- */
   #services h2 {
@@ -1257,5 +1270,29 @@ footer{
   }
 
     .footer-card ul { gap: 8px; }
+
+    /* ---- NAV ---- */
+  .logo {
+    font-size: 36px;          /* was 60px */
+  }
+
+  .menu-btn {
+    display: block;           /* show hamburger on mobile */
+    position: absolute;
+    top: 12px;
+    right: 20px;
+  }
+
+  header nav {
+    display: none;            /* nav hidden until opened */
+  }
+
+  header nav.open {
+    display: flex;            /* shown when JS adds .open */
+    flex-direction: column;
+    gap: 15px;
+    font-size: 22px;
+    padding: 15px 0;
+  }
 
 }
