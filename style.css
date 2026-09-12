@@ -1192,11 +1192,12 @@ footer{
 
   /* ---- BEFORE / AFTER (gallery page) ---- */
   .ba-pair {
-    flex-direction: column;     /* stack the two images */
+    
+    margin: 0 15px 2rem;      /* side gaps + space between pairs */
   }
 
   .ba-image img {
-    height: 250px;
+    height: 220px;             /* was 250 — less letterboxed */
   }
 
 
@@ -1313,6 +1314,11 @@ footer{
   .trust-badges__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 10px;
+  }
+
+    /* ---- GALLERY PAGE: OUR WORK GRID ---- */
+  .gallery-grid {
+    column-count: 2;
   }
 
 }
