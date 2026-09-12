@@ -1070,3 +1070,44 @@ footer{
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
+
+/* Before & After */
+.before-after {
+    padding: 0 0 4rem;      /* no side padding → band goes edge to edge */
+}
+
+.ba-pair {
+    display: flex;          /* two images side by side */
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.ba-image {
+    position: relative;     /* the anchor the badge sits on */
+    flex: 1;
+}
+
+.ba-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;      /* crop instead of stretch */
+    border-radius: 8px;
+    display: block;
+}
+
+.ba-badge {
+    position: absolute;     /* float on top of the image */
+    top: 12px;
+    left: 12px;
+    background: var(--gold);
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+
+
