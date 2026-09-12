@@ -1154,6 +1154,12 @@ footer{
     gap: 10px;
   }
 
+  .hero-buttons a {
+    font-size: 15px;
+    padding: 10px 16px;
+    white-space: nowrap;    /* keep text on one line */
+  }
+
   .hero-rating {
     justify-content: center;
   }
