@@ -314,36 +314,43 @@
             <div class="quote-grid">
               <h2>Request a Free Quote</h2>
               <h3>Fill out the form below and we'll get back to you as soon as possible.</h3>
-              <div class="form-group">
-                <i data-lucide="user"></i>
-                <input type="text" placeholder="Your Name" >
+              <form name="quote" method="POST" data-netlify="true">
 
-              </div>
+                <div class="form-group">
+                  <i data-lucide="user"></i>
 
-              <div class="form-group">
-                <i data-lucide="mail"></i>
-                <input type="email" placeholder="Email Address">
-                
-              </div>
+                  <input type="text" name="name" placeholder="Your Name" required>
+                </div>
 
+                <div class="form-group">
+                  <i data-lucide="mail"></i>
 
-              <div class="form-group">
-                <i data-lucide="phone"></i>
-                <input type="tel" placeholder="Phone Number">
-              </div>
+                  <input type="email" name="email" placeholder="Email Address" required>
+                  
+                </div>
 
 
-              <div class="form-group">
-                <i data-lucide="message-square"></i>
-                <textarea placeholder="Your Message"></textarea>
-              </div>
+                <div class="form-group">
+                  <i data-lucide="phone"></i>
 
-            
-              <button>
-                
-                REQUEST FREE QUOTE
-                <i data-lucide="move-right"></i>  
-              </button>
+                  <input type="tel" name="phone" placeholder="Phone Number">
+                </div>
+
+
+                <div class="form-group">
+                  <i data-lucide="message-square"></i>
+
+                  <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+
+              
+                <button type="submit">
+                  
+                  REQUEST FREE QUOTE
+                  <i data-lucide="move-right"></i>  
+                </button>
+
+              </form>
 
               <p class="privacy-note">
                 <i data-lucide="lock"></i>
