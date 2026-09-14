@@ -314,7 +314,8 @@
             <div class="quote-grid">
               <h2>Request a Free Quote</h2>
               <h3>Fill out the form below and we'll get back to you as soon as possible.</h3>
-              <form name="quote" method="POST" data-netlify="true">
+              <form name="quote" method="POST" data-netlify="true" action="/thanks.html">
+                <input type="hidden" name="form-name" value="quote">
 
                 <div class="form-group">
                   <i data-lucide="user"></i>
@@ -351,10 +352,13 @@
                 </button>
 
               </form>
+              <p class="form-success" hidden>
+                ✓ Thank you! We've received your request and will get back to you soon.
+              </p>
 
               <p class="privacy-note">
                 <i data-lucide="lock"></i>
-                Your information is safe with us. We never share your details.
+                We only use your details to respond to your enquiry. We never share them with anyone else.
               </p>
               
             
@@ -480,7 +484,28 @@
 
 
 
+  <script>
+    const form = document.querySelector("#quote form");
+    const success = document.querySelector(".form-success");
 
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();                        // stop the normal page-jump
+
+      const data = new FormData(form);           // collect the fields
+
+      try {
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(data).toString(),
+        });
+        form.reset();                            // clear the fields
+        success.hidden = false;                  // reveal the message
+      } catch (error) {
+        form.submit();                           // JS failed → old way → thanks.html
+      }
+    });
+  </script>
     
     <script>
       lucide.createIcons();

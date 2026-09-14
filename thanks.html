@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank You — Marwa.D Ltd</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  </head>
+
+  <body>
+      
+    <!--
+    1. navbar     ← التنقل
+    2. hero       ← أول شي المستخدم يشوفه
+    3. services   ← شو بتقدمي
+    4. gallery    ← صور الشغل
+    5. contact    ← تواصل
+    6. footer     ← معلومات بسيطة
+    -->
+
+    <header>
+      <a href="index.html" class="logo">Marwa Ltd</a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#quote">Contact</a>
+      </nav>
+    </header>
+    
+    <main>
+
+        <section class="thanks">
+        <h2>Thank you!</h2>
+        <p>We've received your request and will get back to you within 1–2 working days.</p>
+        <a href="index.html" class="services-btn">Back to Home</a>
+        </section>
+    
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-card">
+          <h3 class="footer-heading">Marwa.D LTD</h3>
+          <h4 class="footer-heading2">TILING & RENOVATION</h4>
+          <p>
+            Quality tiling solutions that transform spaces.
+            Built on trust, delivered with care.
+          </p>
+          
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/share/1a2eECfnUV/" target="_blank" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+ 
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/marwa.dltd1" target="_blank" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@maraw.dltd" target="_blank" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@marawd5541" target="_blank" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+          </a>
+
+        </div>
+
+        <div class="footer-card">
+          <h4>QUICK LINKS</h4>
+          <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html#reviews">Reviews</a>
+            <a href="index.html#quote">Contact</a>
+          </div>
+
+
+        </div>
+
+
+
+        <div class="footer-card">
+          <h4>OUR SERVICES</h4>
+          <ul>
+            <li><a href="services.html">Bathrooms</a></li>
+            <li><a href="services.html">Kitchens</a></li>
+            <li><a href="services.html">Wall & Floor Tiling</a></li>
+            <li><a href="services.html">Extensions & Lofts</a></li>
+            <li><a href="services.html">Outdoor & Patios</a></li>
+          </ul>
+
+        </div>
+
+
+
+        <div class="footer-card">
+          <h4>AREAS WE SERVE</h4>
+          <ul>
+            <li>Barnsley</li>
+            <li>Sheffield</li>
+            <li>Rotherham</li>
+            <li>Leeds </li>
+            <li>& surrounding areas</li>
+
+          </ul>
+
+
+        </div>
+
+
+
+        <div class="footer-card">
+          <h4>GET IN TOUCH</h4>
+
+          <div class="contact-item">
+            <i data-lucide="phone"></i>
+            <a href="tel:07432806270">07432806270</a>
+          </div>
+
+
+          <div class="contact-item">
+              <i data-lucide="mail"></i>
+              <a href="mailto:marwa.dltd@gmail.com">marwa.dltd@gmail.com</a>
+
+          </div>
+
+
+          <div class="contact-item">
+            <i data-lucide="map-pin"></i>
+            <span>Serving Yorkshire & surrounding areas</span>
+
+          </div>
+      
+        </div>
+
+        
+
+      </div>
+
+      <p class="copyright">© <span id="year"></span> Marwa.D Ltd. All rights reserved.</p>
+
+
+    </footer>
+
+
+
+    <script>
+      lucide.createIcons();
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+      const btn = document.querySelector(".menu-btn");
+      const nav = document.querySelector("header nav");
+      btn.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    </script>
+
+  </body>
+
+</html>
