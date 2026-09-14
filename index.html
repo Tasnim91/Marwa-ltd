@@ -494,15 +494,18 @@
       const data = new FormData(form);           // collect the fields
 
       try {
-        await fetch("/", {
+        const response = await fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(data).toString(),
         });
+
+        if (!response.ok) throw new Error("Failed");   // bad response → fallback
+
         form.reset();                            // clear the fields
         success.hidden = false;                  // reveal the message
       } catch (error) {
-        form.submit();                           // JS failed → old way → thanks.html
+        form.submit();                           // any failure → thanks.html way
       }
     });
   </script>
